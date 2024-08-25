@@ -13,21 +13,21 @@ with col1:
 
 # Display title in the second column
 with col2:
-    st.title('Globin Suite TB X-ray Predictor')
+    st.title('Breast Cancer Predictor')
 
-st.header("upload an image of a chest X-ray image")
+st.header("upload an image of an ultrasound scan of a breast tissue")
 #set header
-st.text('')
+st.text('By Mohammed Saabiq Saha')
 
 #upload file
 file = st.file_uploader('', type=['jpeg', 'jpg', 'png'])
 
 #load classifier
-model = load_model('model/uhmmm.h5')
+model = load_model('model/keras_model.h5')
 
 
 #load classnames
-with open('model/lemme.txt', 'r') as f:
+with open('model/labels.txt', 'r') as f:
     class_names = [a[:-1].split(' ')[1] for a in f.readlines()]
     f.close()
 

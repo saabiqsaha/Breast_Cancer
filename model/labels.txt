@@ -1,2 +1,2 @@
-0 Benign
-1 Malignant
+0 Organic Trash
+1 Non Organic Trash
